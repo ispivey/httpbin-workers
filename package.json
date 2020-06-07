@@ -1,0 +1,27 @@
+{
+  "name": "httpbin-workers",
+  "version": "1.0.0",
+  "description": "An HTTP Request & Response Service, written in TypeScript for deployment on Cloudflare Workers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ispivey/httpbin-workers.git"
+  },
+  "author": "Ian Spivey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ispivey/httpbin-workers/issues"
+  },
+  "homepage": "https://github.com/ispivey/httpbin-workers#readme",
+  "dependencies": {
+    "@cloudflare/workers-types": "^1.0.9"
+  },
+  "devDependencies": {
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0"
+  }
+}
