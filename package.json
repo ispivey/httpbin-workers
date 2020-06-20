@@ -2,9 +2,9 @@
   "name": "httpbin-workers",
   "version": "1.0.0",
   "description": "An HTTP Request & Response Service, written in TypeScript for deployment on Cloudflare Workers.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "test"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/ispivey/httpbin-workers#readme",
   "dependencies": {
+    "8track": "^1.1.1",
     "@cloudflare/workers-types": "^2.0.0"
   },
   "devDependencies": {
+    "source-map-loader": "^0.2.4",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
     "webpack": "^4.43.0"
