@@ -4,7 +4,8 @@
   "description": "An HTTP Request & Response Service, written in TypeScript for deployment on Cloudflare Workers.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "docs": "apidoc -i src/ -o doc/"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "@cloudflare/workers-types": "^2.0.0"
   },
   "devDependencies": {
+    "apidoc": "^0.23.0",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
