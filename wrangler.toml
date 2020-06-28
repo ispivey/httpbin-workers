@@ -1,4 +1,4 @@
-name = "httpbin-workers"
+name = "httpbin"
 type = "webpack"
 account_id = "e733c486ff936cfb7cdf644badc953e2"
 workers_dev = true
