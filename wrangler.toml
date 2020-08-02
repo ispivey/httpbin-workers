@@ -1,7 +1,11 @@
 name = "httpbin"
 type = "webpack"
 account_id = "e733c486ff936cfb7cdf644badc953e2"
-workers_dev = true
-route = ""
-zone_id = ""
+workers_dev = false
+route = "httpbin.workers.works/*"
+zone_id = "b532234e46b0ac42b02ae57695498df0"
 webpack_config = "webpack.config.js"
+
+[site]
+bucket = "./doc"
+entry-point = "./src"

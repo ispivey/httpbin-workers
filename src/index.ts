@@ -1,11 +1,8 @@
 import { Router, getErrorPageHTML } from '8track'
+import { getAssetFromKV, mapRequestToAsset, serveSinglePageApp, NotFoundError } from '@cloudflare/kv-asset-handler'
 
 const router = new Router()
 
-/**
- * Eventually, make this serve the static documentation site.
- */
-router.get`/`.handle(ctx => ctx.html('Hello, world!'))
 /**
  * @api {get} /headers /headers
  * @apiDescription Return the incoming request's HTTP headers.
@@ -119,7 +116,12 @@ router.get`/cache`.handle(async ctx => {
     return ctx.json(await handleGet(r))
   })
 
-router.all`(.*)`.handle(ctx => ctx.end('Not found', { status: 404 }))
+/**
+ * Serve static assets for the documentation site.
+ */
+router.get`(.*)`.handle(async ctx => {
+  return ctx.end(await getAssetFromKV(ctx.event))
+})
 
 addEventListener('fetch', e => {
   const res = router.getResponseForEvent(e).catch(
