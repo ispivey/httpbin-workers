@@ -1,7 +1,7 @@
 {
   "name": "httpbin-workers",
   "version": "1.0.0",
-  "description": "An HTTP Request & Response Service, written in TypeScript for deployment on Cloudflare Workers.",
+  "description": "An HTTP request & response service, written in TypeScript for deployment on Cloudflare Workers.",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack",
