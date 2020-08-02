@@ -13,7 +13,9 @@ If you want to play around with `httpbin-workers` from your terminal, try `curl 
 
 ## Deployment
 
-To deploy, first update `wrangler.toml` to include the appropriate account and zone ID for your deployment, and then run:
+Changes to this repository are deployed directly to httpbin.workers.works.
+
+To deploy to your own zone, clone or fork and update your `wrangler.toml` to include the appropriate account and zone ID for your deployment, and then run:
 
 ```bash
 npm run docs && wrangler publish
