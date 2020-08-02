@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ispivey/httpbin-workers#readme",
   "dependencies": {
     "8track": "^1.1.1",
+    "@cloudflare/kv-asset-handler": "0.0.10",
     "@cloudflare/workers-types": "^2.0.0"
   },
   "devDependencies": {
